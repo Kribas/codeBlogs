@@ -1,0 +1,12 @@
+.container {
+  max-width: 20vw;
+  margin: auto;
+}
+
+.mb3 {
+  margin-bottom: 20px;
+}
+
+.form_label {
+  margin-right: 20px;
+}
