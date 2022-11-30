@@ -29,6 +29,7 @@ const Contact = () => {
 
   return (
     <div className={styles.container}>
+      <h1>Contact Us</h1>
       <form onSubmit={handleSubmit}>
         <div className={styles.mb3}>
           <label htmlFor="name" className={styles.form_label}>
@@ -37,7 +38,7 @@ const Contact = () => {
           <input
             onChange={(e) => setName(e.target.value)}
             type="text"
-            className="form-control"
+            className={styles.form_control}
             id="name"
             name="name"
             value={name}
@@ -51,7 +52,7 @@ const Contact = () => {
           <input
             type="email"
             onChange={(e) => setEmail(e.target.value)}
-            className="form-control"
+            className={styles.form_control}
             id="email"
             name="email"
             value={email}
@@ -65,26 +66,27 @@ const Contact = () => {
           <input
             type="phone"
             onChange={(e) => setPhone(e.target.value)}
-            className="form-control"
+            className={styles.form_control}
             id="phone"
             name="phone"
             value={phone}
           />
         </div>
 
-        <div class="form-floating">
-          <label for="desc">Elaborate your concern</label>
+        <div className={styles.mb3}>
+          <label className={styles.form_label} for="desc">
+            Elaborate your concern
+          </label>
 
           <textarea
             onChange={(e) => setDesc(e.target.value)}
-            class="form-control"
+            className={styles.form_control}
             value={desc}
-            placeholder="Write your concern here"
             id="desc"
           ></textarea>
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className={styles.btn}>
           Submit
         </button>
       </form>
