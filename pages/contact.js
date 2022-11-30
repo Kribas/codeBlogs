@@ -43,6 +43,7 @@ const Contact = () => {
             name="name"
             value={name}
             aria-describedby="emailHelp"
+            required
           />
         </div>
         <div className={styles.mb3}>
@@ -56,6 +57,7 @@ const Contact = () => {
             id="email"
             name="email"
             value={email}
+            required
           />
         </div>
 
@@ -70,6 +72,7 @@ const Contact = () => {
             id="phone"
             name="phone"
             value={phone}
+            required
           />
         </div>
 
@@ -83,6 +86,7 @@ const Contact = () => {
             className={styles.form_control}
             value={desc}
             id="desc"
+            required
           ></textarea>
         </div>
 
