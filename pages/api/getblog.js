@@ -3,6 +3,7 @@
 import * as fs from "fs";
 
 export default function handler(req, res) {
+  console.log("Request", req.query.slug);
   fs.readFile(`blogPost/${req.query.slug}.json`, "utf-8", (err, data) => {
     if (err) {
       res.status(500).json({ error: "Nothing found" });

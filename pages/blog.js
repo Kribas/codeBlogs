@@ -16,6 +16,8 @@ const Blog = (props) => {
     setBlogs(data);
   };
 
+  console.log("Blogs", blogs);
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -31,7 +33,7 @@ const Blog = (props) => {
           }
         >
           {blogs.map((blog) => (
-            <div key={blog.title} className="blogs">
+            <div key={blog.id} className="blogs">
               <div className={styles.blogItem}>
                 <h3>{blog.title}</h3>
                 <p>{blog.content.substr(0, 140)}...</p>
@@ -54,7 +56,7 @@ export async function getStaticProps(context) {
   const allCount = data.length;
   let myFile;
   let allBlogs = [];
-  for (let index = 0; index < 5; index++) {
+  for (let index = 0; index < allCount; index++) {
     const item = data[index];
     console.log("Item", item);
     myFile = await fs.promises.readFile("blogPost/" + item, "utf-8");
